@@ -8,21 +8,17 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\bzztt\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\bzztt\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bzztt\\source\\repos\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions.csproj",
+      "projectUniqueName": "C:\\Users\\bzztt\\Source\\Repos\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions.csproj",
       "projectName": "Lab7_Regular_Expressions",
-      "projectPath": "C:\\Users\\bzztt\\source\\repos\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions.csproj",
+      "projectPath": "C:\\Users\\bzztt\\Source\\Repos\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions.csproj",
       "packagesPath": "C:\\Users\\bzztt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bzztt\\source\\repos\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions\\obj\\",
+      "outputPath": "C:\\Users\\bzztt\\Source\\Repos\\Lab7_Regular_Expressions\\Lab7_Regular_Expressions\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\bzztt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -62,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

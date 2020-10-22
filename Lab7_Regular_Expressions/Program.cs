@@ -41,12 +41,12 @@ namespace Lab7_Regular_Expressions
             }
         }
 
-        static bool isPhoneNumber(string phonenumber)
+        static void isPhoneNumber()
         {
             Console.Write("Please enter a phone number (ex. (555) 555-5555 or 555-555-5555): ");
             string userInput = Console.ReadLine();
 
-            Regex regexPattern = new Regex(@"^((\d{3}-)|(\(\d{3}\)(-| )))?\d{3}-\d{4}$");
+            Regex regexPattern = new Regex(@"^((\d{3}-)|(\(\d{3}\)(-| )))?\d{3}-\d{4}$"); // credit to James Jackson for doing in class
 
             if (regexPattern.IsMatch(userInput))
             {
@@ -57,17 +57,18 @@ namespace Lab7_Regular_Expressions
                 Console.WriteLine($"{userInput} is not a valid phone number.");
             }
         }
-
-        static bool isDate(string date)
+        
+        static void isDate()
         {
-            Console.Write("Please enter a date (mm/dd/yyyy): ");
+            Console.Write("Please enter a date (dd/mm/yyyy): ");
             string userInput = Console.ReadLine();
 
-            Regex regexPattern = new Regex(@"");
+            // Credit to Macs Dickinson of regexr.com Community Patterns cause my head was about to explode.
+            Regex regexPattern = new Regex(@"^(((0[1-9]|[12][0-9]|3[01])[- /.](0[13578]|1[02])|(0[1-9]|[12][0-9]|30)[- /.](0[469]|11)|(0[1-9]|1\d|2[0-8])[- /.]02)[- /.]\d{4}|29[- /.]02[- /.](\d{2}(0[48]|[2468][048]|[13579][26])|([02468][048]|[1359][26])00))$");
 
             if (regexPattern.IsMatch(userInput))
             {
-                Console.WriteLine($"{userInput} qualifies as date.");
+                Console.WriteLine($"{userInput} qualifies as a date.");
             }
             else
             {
@@ -76,24 +77,24 @@ namespace Lab7_Regular_Expressions
         }
         static void Main(string[] args)
         {
-            Console.Write("So what shall we validate today?\n1. Name\n2. Email\n3. Phone Number\n4. Date\n");
+            Console.Write("1. Name\n2. Email\n3. Phone Number\n4. Date\nSo what shall we validate today? ");
             int selection = int.Parse(Console.ReadLine());
             switch (selection)
             {
-                case: 1 
-                    isName(name);
+                case 1: 
+                    isName();
                     break;
 
-                case: 2
-                    isEmail(email);
+                case 2:
+                    isEmail();
                     break;
 
-                case: 3
-                    isPhoneNumber(phonenumber);
+                case 3:
+                    isPhoneNumber();
                     break;
 
-                case: 4
-                    isDate(date);
+                case 4:
+                    isDate();
                     break;
 
                 default:
@@ -102,20 +103,4 @@ namespace Lab7_Regular_Expressions
             }
         }
     }
-}
-Regex phoneNumberPattern = new Regex(@"^((\d{3}-)|(\(\d{3}\)(-| )))?\d{3}-\d{4}$");
-
-Console.WriteLine("please insert a valid phone number");
-string phoneNumber = Console.ReadLine();
-
-string badPhoneNumber = "lol, I'm not a number ;)";
-
-if (phoneNumberPattern.IsMatch(phoneNumber))
-{
-    Console.WriteLine("This is a valid number");
-}
-
-if (!phoneNumberPattern.IsMatch(badPhoneNumber))
-{
-    Console.WriteLine("this is a bad phone number :(");
 }
