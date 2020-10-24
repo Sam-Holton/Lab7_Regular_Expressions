@@ -78,7 +78,20 @@ namespace Lab7_Regular_Expressions
         static void Main(string[] args)
         {
             Console.Write("1. Name\n2. Email\n3. Phone Number\n4. Date\nSo what shall we validate today? ");
-            int selection = int.Parse(Console.ReadLine());
+            string userInput = Console.ReadLine();
+            if (!int.TryParse(userInput, out int selection) || (selection < 1 || selection > 4))
+            {
+                do
+                {
+                    Console.Clear();
+                    Console.WriteLine("That wasn't a valid entry. Please try again.\n");
+
+                    Console.Write("1. Name\n2. Email\n3. Phone Number\n4. Date\nSo what shall we validate today? ");
+                    userInput = Console.ReadLine();
+
+                } while (!int.TryParse(userInput, out selection) || (selection < 1 || selection > 4));
+            }
+            
             switch (selection)
             {
                 case 1: 
@@ -98,7 +111,6 @@ namespace Lab7_Regular_Expressions
                     break;
 
                 default:
-                    Console.WriteLine("Not a Valid Entry, Try Again");
                     break;
             }
         }
